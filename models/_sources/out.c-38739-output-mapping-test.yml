@@ -1,0 +1,17 @@
+version: 2
+sources:
+    - name: out.c-38739-output-mapping-test
+      freshness:
+        warn_after:
+            count: 1
+            period: day
+      database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+      schema: out.c-38739-output-mapping-test
+      loaded_at_field: '"_timestamp"'
+      tables:
+        - name: table21
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
